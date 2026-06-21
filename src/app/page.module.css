@@ -1,0 +1,274 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 4rem;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 800px;
+  z-index: 10;
+}
+
+.titleOver {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  line-height: 0.95;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.titleRow {
+  overflow: hidden;
+  display: block;
+}
+
+.description {
+  font-size: 1.15rem;
+  max-width: 500px;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollLine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gold);
+  transform: translateY(-100%);
+  animation: scrollDrift 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scrollDrift {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+/* Projects Section */
+.projectsSection {
+  padding: 8rem 0;
+}
+
+.sectionHeader {
+  margin-bottom: 5rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 0.9rem;
+  color: var(--accent-gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem;
+}
+
+.gridItemFull {
+  grid-column: span 2;
+}
+
+.card {
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.4s var(--transition-smooth);
+}
+
+.card:hover {
+  border-color: rgba(197, 168, 128, 0.3);
+}
+
+.mediaWrapper {
+  aspect-ratio: 16/9;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--transition-smooth);
+}
+
+.card:hover .media {
+  transform: scale(1.03);
+}
+
+.cardContent {
+  padding: 2rem;
+}
+
+.projectCategory {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.projectDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.8rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-glass);
+  border-radius: 2px;
+  color: var(--text-secondary);
+}
+
+/* Contact Section */
+.contactSection {
+  padding: 8rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--bg-secondary);
+  padding: 3rem;
+  border: 1px solid var(--border-glass);
+  border-radius: 4px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-glass);
+  padding: 1rem;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  border-radius: 2px;
+  transition: border-color 0.3s;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+.statusMsg {
+  padding: 1rem;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.statusSuccess {
+  background: rgba(197, 168, 128, 0.1);
+  color: var(--accent-gold);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.statusError {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .gridItemFull {
+    grid-column: span 1;
+  }
+  .form {
+    padding: 2rem;
+  }
+}

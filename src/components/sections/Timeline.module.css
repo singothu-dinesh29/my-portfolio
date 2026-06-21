@@ -1,0 +1,142 @@
+.timeline {
+  padding: 10rem 4rem;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.overTitle {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+}
+
+.timelineContainer {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* The vertical scroll line */
+.line {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.progressLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--accent-gold);
+  height: 0; /* Animated via GSAP */
+  box-shadow: 0 0 15px var(--accent-gold);
+  transform-origin: top;
+}
+
+.item {
+  position: relative;
+  padding-left: 5rem;
+  margin-bottom: 5rem;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+/* The dot indicator */
+.dot {
+  position: absolute;
+  left: 1.5rem; /* Centered with vertical line */
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  background: var(--bg-primary);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 10;
+  transition: all 0.4s var(--transition-smooth);
+}
+
+.activeDot {
+  border-color: var(--accent-gold);
+  background: var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold);
+}
+
+.year {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 4px;
+  transition: all 0.4s var(--transition-smooth);
+  position: relative;
+}
+
+.card:hover {
+  border-color: rgba(197, 168, 128, 0.25);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.role {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding: 6rem 2rem;
+  }
+  .line {
+    left: 1rem;
+  }
+  .dot {
+    left: 0.5rem;
+  }
+  .item {
+    padding-left: 3rem;
+  }
+}

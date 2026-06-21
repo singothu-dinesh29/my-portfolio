@@ -1,0 +1,9 @@
+/* Export CSS tokens to TypeScript for WebGL / GSAP dynamic calculations */
+:export {
+  bgPrimary: #08080a;
+  bgSecondary: #0c0c10;
+  accentGold: #c5a880;
+  accentBlue: #3b82f6;
+  fontSans: 'Outfit', sans-serif;
+  fontDisplay: 'Syne', sans-serif;
+}

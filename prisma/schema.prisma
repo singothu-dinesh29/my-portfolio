@@ -1,0 +1,90 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum LeadStatus {
+  PENDING
+  CONTACTED
+  QUALIFIED
+  CONVERTED
+  REJECTED
+}
+
+model CollaborationLead {
+  id          String     @id @default(uuid())
+  fullName    String     @db.VarChar(255)
+  email       String     @db.VarChar(255)
+  company     String?    @db.VarChar(255)
+  projectIdea String     @db.Text
+  budget      String     @db.VarChar(100)
+  status      LeadStatus @default(PENDING)
+  createdAt   DateTime   @default(now())
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model ContactMessage {
+  id        String   @id @default(uuid())
+  name      String   @db.VarChar(255)
+  email     String   @db.VarChar(255)
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+
+  @@index([email])
+  @@index([createdAt])
+}
+
+model NewsletterSubscriber {
+  id           String   @id @default(uuid())
+  email        String   @unique @db.VarChar(255)
+  subscribedAt DateTime @default(now())
+
+  @@index([subscribedAt])
+}
+
+model Project {
+  id           String   @id @default(uuid())
+  title        String
+  slug         String   @unique
+  description  String
+  category     String
+  client       String?
+  role         String?
+  year         Int
+  coverImage   String
+  images       String[]
+  tags         String[]
+  demoUrl      String?
+  githubUrl    String?
+  isFeatured   Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Experience {
+  id          String   @id @default(uuid())
+  company     String
+  role        String
+  location    String?
+  duration    String
+  description String
+  isCurrent   Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Skill {
+  id        String   @id @default(uuid())
+  name      String
+  category  String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}

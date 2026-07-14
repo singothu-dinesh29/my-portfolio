@@ -96,14 +96,16 @@ export const Projects: React.FC = () => {
           >
             <div className={styles.mediaWrapper}>
               {hoveredProjectId === project.id ? (
-                <video
-                  src="/portfolio.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className={styles.media}
-                />
+                <div style={{ position: "relative", width: "100%", height: "100%" }}>
+                  <Image
+                    src="/ecommerce_preview.png"
+                    alt="E-commerce preview"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className={styles.media}
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
               ) : (
                 <div style={{ position: "relative", width: "100%", height: "100%" }}>
                   <Image

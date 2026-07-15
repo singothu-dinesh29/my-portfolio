@@ -62,23 +62,23 @@ export const Innovation: React.FC = () => {
       <div className={styles.grid}>
         {/* Content Info (LEFT) */}
         <div ref={contentRef} className={styles.content}>
-          <h3 className={styles.subtitle}>Supercharging Creativity via Machine Intelligence</h3>
+          <h3 className={styles.subtitle}>Smartest People Club (SPC)</h3>
           <p className={styles.desc}>
-            I leverage state-of-the-art AI assistant workflows, custom automation, and LLM orchestration to optimize code outputs, automate assets processing pipelines, and validate strict TypeScript compilation.
+            <strong>Smartest People Club (SPC)</strong> is a student-driven community built to connect ambitious learners, creators, developers, innovators, and future leaders under one powerful network. Our mission is to create an environment where passionate individuals learn faster, build together, and grow beyond academics. Through high-quality content, real-world projects, mentorship, career guidance, networking, and collaborative learning, we empower students to unlock their true potential. We believe that success is not achieved alone—it is built through the right people, the right mindset, and the right opportunities. SPC is more than a community; it is a movement dedicated to shaping the next generation of innovators and changemakers. Together, we learn, build, lead, and inspire.
           </p>
           
           <div className={styles.featureList}>
             <div className={styles.featureItem}>
               <span className={styles.bullet}>{"//"}</span>
-              <span className={styles.featureText}>Custom model pipelines to build interactive WebGL shader materials.</span>
+              <span className={styles.featureText}>Learn: High-quality content, mentorship, and career guidance.</span>
             </div>
             <div className={styles.featureItem}>
               <span className={styles.bullet}>{"//"}</span>
-              <span className={styles.featureText}>10x deployment speed with pre-validated error checks.</span>
+              <span className={styles.featureText}>Build: Real-world projects and collaborative learning.</span>
             </div>
             <div className={styles.featureItem}>
               <span className={styles.bullet}>{"//"}</span>
-              <span className={styles.featureText}>Generative UI design systems tailored dynamically to user preferences.</span>
+              <span className={styles.featureText}>Grow: Networking, right mindset, and the right opportunities.</span>
             </div>
           </div>
 

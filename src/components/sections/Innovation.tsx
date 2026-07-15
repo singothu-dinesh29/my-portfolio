@@ -84,7 +84,7 @@ export const Innovation: React.FC = () => {
 
           <div className={styles.ctaWrapper}>
             <a 
-              href="https://my-portfolio-beryl-beta-76.vercel.app" 
+              href="https://smartest-people-club.vercel.app" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={styles.ctaButton}
@@ -97,7 +97,7 @@ export const Innovation: React.FC = () => {
         {/* Clickable Image / Visual Card (RIGHT) */}
         <div ref={cardRef} className={styles.displayCard}>
           <a 
-            href="https://my-portfolio-beryl-beta-76.vercel.app" 
+            href="https://smartest-people-club.vercel.app" 
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.imageLink}

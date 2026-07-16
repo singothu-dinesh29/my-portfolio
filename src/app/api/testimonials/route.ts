@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { z } from "zod";
 
+export const dynamic = "force-dynamic";
+
 const TESTIMONIAL_SCHEMA = z.object({
   name: z.string().min(1, "Name is required").max(100),
   role: z.string().max(100).optional().nullable(),

@@ -56,13 +56,15 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       data: [...formattedDb, ...STATIC_TESTIMONIALS],
+      debugKeys: Object.keys(process.env).filter(k => k.includes("URL") || k.includes("DB") || k.includes("DATABASE") || k.includes("POSTGRES")),
     });
   } catch (error) {
     console.warn("Prisma query for testimonials failed. Falling back to static mock data:", error);
     return NextResponse.json({
       success: true,
       data: STATIC_TESTIMONIALS,
-      isFallback: true
+      isFallback: true,
+      debugKeys: Object.keys(process.env).filter(k => k.includes("URL") || k.includes("DB") || k.includes("DATABASE") || k.includes("POSTGRES")),
     });
   }
 }

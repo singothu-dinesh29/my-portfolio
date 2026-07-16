@@ -104,8 +104,9 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error("Failed to submit testimonial:", error);
+    const errorMsg = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { success: false, error: "Internal server error. Database may need schema synchronization." },
+      { success: false, error: `Failed: ${errorMsg}` },
       { status: 500 }
     );
   }

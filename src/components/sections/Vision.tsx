@@ -61,7 +61,7 @@ export const Vision: React.FC = () => {
         <div className={styles.orangeGlowCircle} />
         
         <p className={styles.quote}>
-          &quot;Dinesh Singothu, a passionate Student about building his Future as both a <span className={styles.quoteAccent}>Software Engineer</span> by building projects and a successful <span className={styles.quoteAccent}>Entrepreneur</span> by building community, leaders, and products...&quot;
+          &quot;Dinesh Singothu a passionate Student about building his Future as both a <span className={styles.quoteAccent}>Software Engineer</span> by building projects and A successful <span className={styles.quoteAccent}>Entrepreneur</span> by building community,Leaders,and Products...&quot;
         </p>
 
         <div ref={colsRef} className={styles.columns}>

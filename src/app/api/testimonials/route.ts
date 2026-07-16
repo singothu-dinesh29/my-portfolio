@@ -58,7 +58,6 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       data: [...formattedDb, ...STATIC_TESTIMONIALS],
-      debugKeys: Object.keys(process.env).filter(k => k.includes("URL") || k.includes("DB") || k.includes("DATABASE") || k.includes("POSTGRES")),
     });
   } catch (error) {
     console.warn("Prisma query for testimonials failed. Falling back to static mock data:", error);
@@ -66,7 +65,6 @@ export async function GET() {
       success: true,
       data: STATIC_TESTIMONIALS,
       isFallback: true,
-      debugKeys: Object.keys(process.env).filter(k => k.includes("URL") || k.includes("DB") || k.includes("DATABASE") || k.includes("POSTGRES")),
     });
   }
 }

@@ -88,3 +88,15 @@ model Skill {
   order     Int      @default(0)
   createdAt DateTime @default(now())
 }
+
+model Testimonial {
+  id         String   @id @default(uuid())
+  name       String   @db.VarChar(255)
+  role       String?  @db.VarChar(255)
+  company    String?  @db.VarChar(255)
+  content    String   @db.Text
+  isApproved Boolean  @default(true)
+  createdAt  DateTime @default(now())
+
+  @@index([createdAt])
+}

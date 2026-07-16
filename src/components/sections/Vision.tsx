@@ -61,21 +61,21 @@ export const Vision: React.FC = () => {
         <div className={styles.orangeGlowCircle} />
         
         <p className={styles.quote}>
-          &quot;We are moving from static pixel containers to <span className={styles.quoteAccent}>fluid spatial computing</span> where web layouts are alive, context-aware, and powered by three-dimensional shaders.&quot;
+          &quot;Dinesh Singothu, a passionate Student about building his Future as both a <span className={styles.quoteAccent}>Software Engineer</span> by building projects and a successful <span className={styles.quoteAccent}>Entrepreneur</span> by building community, leaders, and products...&quot;
         </p>
 
         <div ref={colsRef} className={styles.columns}>
           <div className={styles.column}>
-            <h4>Spatial Layouts</h4>
+            <h4>SOFTWARE ENGINEER</h4>
             <p>
-              In the future, web applications will transcend flat sheets of paper. They will exist as volume objects in spatial computing formats, adapting to user gaze, ambient lighting, and physics-driven scroll modules.
+              Focusing on designing practical solutions where intelligent algorithms, powerful software, and creative engineering meet. Building high-performance applications, interactive web systems, and exploring emerging technology.
             </p>
           </div>
 
           <div className={styles.column}>
-            <h4>Semantic Web Architecture</h4>
+            <h4>ENTREPRENEUR</h4>
             <p>
-              By combining AI-driven generative design systems and strict structural databases, interfaces will compose themselves on-the-fly, generating custom code paths tailored to each individual client context.
+              Building communities like the Smartest People Club (SPC) to connect ambitious minds, develop future leaders, and build innovative products that shape the next generation of changemakers.
             </p>
           </div>
         </div>
